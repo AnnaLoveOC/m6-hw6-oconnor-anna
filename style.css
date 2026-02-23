@@ -118,13 +118,13 @@ main p {
 
 /* ========== THIS SECTION IS AN ANNA-ADD #2 ========== */
 article p:first-of-type {
-  padding-top: 0.45em; /* THIS is what pushes the paragraph lines down */
+  padding-top: 0.45em; /* pushes ALL THE OTHER paragraph lines down */
 }
 
 article p:first-of-type::first-letter {
   float: left;
 
-  /* size + vertical fit */
+/* font size and line height */
   font-size: 4.6rem;
   line-height: 0.9;
 
@@ -180,9 +180,35 @@ span.tooltip:focus > span {
 /* styling for tooltip bubble */
 span.tooltip span {
   display: none;
+  position: absolute;
+  bottom: 165%;
+  left: 50%;
+  transform: translateX(-50%);
+
+
+
+  background-color: black;
+  color: white;
+
+  padding: 16px 24px;
+  border-radius: 8px;
+  width: 150px;
+  font-size: 1rem;
 }
 
 /* styling for tooltip bubble arrow */
 span.tooltip span::after {
   content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+
+
+ 
+
+  border-width: 12px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
 }
+
