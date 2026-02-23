@@ -117,12 +117,28 @@ main p {
 }
 
 /* ========== THIS SECTION IS AN ANNA-ADD #2 ========== */
-article p::first-letter {
-  font-size: 200%;
-  font-weight: bold;
-  float: left;
-  line-height: 1;
+article p:first-of-type {
+  padding-top: 0.45em; /* THIS is what pushes the paragraph lines down */
 }
+
+article p:first-of-type::first-letter {
+  float: left;
+
+  /* size + vertical fit */
+  font-size: 4.6rem;
+  line-height: 0.9;
+
+  /* spacing around the letter */
+  margin: 0.05em 0.25em 0 0;
+
+  padding: 0.05em 0.18em 0.05em 0.18em;
+  border-left: 6px solid var(--white);
+
+  font-family: Georgia, serif;
+  font-weight: 900;
+  color: var(--text-color);
+}
+
 /* =========== END OF ANNA-ADD #2 ===========*/
 
 main > article img {
